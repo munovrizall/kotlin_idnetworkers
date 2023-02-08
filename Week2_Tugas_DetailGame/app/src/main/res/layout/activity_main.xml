@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#130C20"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="415dp"
+            android:layout_height="236dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/game_picture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icStar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvRating"
+            app:layout_constraintTop_toTopOf="@+id/tvRating"
+            app:srcCompat="@drawable/ic_star" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="4.4"
+            android:textColor="#fff62b"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvGameTitle" />
+
+        <TextView
+            android:id="@+id/tvGameTitle"
+            style="@style/PoppinsTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Elden Ring"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+        <TextView
+            android:id="@+id/tvGameDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2022-02-05"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/tvGameTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvGameTitle" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="@+id/tvGameTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvGameDate">
+
+            <com.google.android.material.chip.Chip
+                style="@style/PoppinsTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E91E63"
+                android:text="Action"
+                android:textColor="@color/white" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/PoppinsTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E91E63"
+                android:text="RPG"
+                android:textColor="@color/white" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/tvGameAbout"
+            style="@style/PoppinsTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="About Game"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvGameTitle"
+            app:layout_constraintTop_toBottomOf="@+id/chipCategory" />
+
+        <TextView
+            android:id="@+id/tvGameDescription"
+            style="@style/PoppinsTextViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/tv_game_description"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvRating"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/tvGameTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvGameAbout" />
+
+        <TextView
+            android:id="@+id/tvGameDevelopersTitle"
+            style="@style/PoppinsTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Developers"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvGameTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvGameDescription" />
+
+        <TextView
+            android:id="@+id/tvGameDevelopers"
+            style="@style/PoppinsTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="FromSoftware"
+            android:textColor="@color/btn_primary"
+            android:textSize="16sp"
+            android:textStyle="italic|bold"
+            app:layout_constraintStart_toStartOf="@+id/tvGameTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvGameDevelopersTitle" />
+
+        <TextView
+            android:id="@+id/tvGamePublishersTitle"
+            style="@style/PoppinsTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Publishers"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvGameTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvGameDevelopers" />
+
+        <TextView
+            android:id="@+id/tvGamePublishers"
+            style="@style/PoppinsTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Bandai Namco"
+            android:textColor="@color/btn_primary"
+            android:textSize="16sp"
+            android:textStyle="italic|bold"
+            app:layout_constraintStart_toStartOf="@+id/tvGameTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvGamePublishersTitle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Add To Favorite"
+            app:backgroundTint="@color/btn_primary"
+            app:cornerRadius="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvRating"
+            app:layout_constraintStart_toStartOf="@+id/tvGameTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvGamePublishers" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
