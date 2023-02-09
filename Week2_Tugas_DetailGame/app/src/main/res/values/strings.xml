@@ -19,4 +19,9 @@
     <string name="tvGamePublisher">Bandai Namco</string>
     <string name="tvScreenshot">Screenshot</string>
     <string name="btnFavorite">Add To Favorite</string>
+    <integer-array name="data_screenshot">
+        <item>@drawable/er1</item>
+        <item>@drawable/er2</item>
+        <item>@drawable/er3</item>
+    </integer-array>
 </resources>

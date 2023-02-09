@@ -1,4 +1,4 @@
-package com.artonov.detailgame.adapter
+package com.artonov.detailgame.data
 
 data class Screenshot(
     val image: Int

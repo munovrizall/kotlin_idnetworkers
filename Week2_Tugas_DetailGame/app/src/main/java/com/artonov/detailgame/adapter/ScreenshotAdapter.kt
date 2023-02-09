@@ -3,20 +3,20 @@ package com.artonov.detailgame.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.artonov.detailgame.R
+import com.artonov.detailgame.data.Screenshot
+import com.artonov.detailgame.databinding.ItemScreenshotBinding
 import com.google.android.material.imageview.ShapeableImageView
 
 class ScreenshotAdapter(private val screenshotList: ArrayList<Screenshot>): RecyclerView.Adapter<ScreenshotAdapter.MyViewHolder>() {
 
-    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val screenshot: ShapeableImageView = itemView.findViewById(R.id.imgScreenshot)
+    inner class MyViewHolder(val binding: ItemScreenshotBinding) : RecyclerView.ViewHolder(binding.root) {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_screenshot, parent,false)
-        return MyViewHolder(itemView)
+        val v = ItemScreenshotBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return MyViewHolder(v)
     }
 
     override fun getItemCount(): Int {
@@ -25,6 +25,6 @@ class ScreenshotAdapter(private val screenshotList: ArrayList<Screenshot>): Recy
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = screenshotList[position]
-        holder.screenshot.setImageResource(currentItem.image)
+        holder.binding.imgScreenshot.setImageResource(currentItem.image)
     }
 }
