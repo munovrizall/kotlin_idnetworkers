@@ -7,4 +7,16 @@
         claimed the shards of the Elden Ring known as the Great Runes, and the mad taint of
         their newfound strength triggered a war: The Shattering. A war that meant abandonment by
         the Greater</string>
+    <string name="tvRating">4.4</string>
+    <string name="tvGameTitle">Elden Ring</string>
+    <string name="tvGameDate">2022-02-05</string>
+    <string name="chipAction">Action</string>
+    <string name="chipRPG">RPG</string>
+    <string name="tvGameAbout">About Game</string>
+    <string name="tvGameDevelopersTitle">Developers</string>
+    <string name="tvGameDevelopers">FromSoftware</string>
+    <string name="tvGamePublishersTitle">Publishers</string>
+    <string name="tvGamePublisher">Bandai Namco</string>
+    <string name="tvScreenshot">Screenshot</string>
+    <string name="btnFavorite">Add To Favorite</string>
 </resources>
