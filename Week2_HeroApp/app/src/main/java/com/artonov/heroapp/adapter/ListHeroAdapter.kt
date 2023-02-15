@@ -1,8 +1,10 @@
 package com.artonov.heroapp.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.artonov.heroapp.DetailActivity
 import com.artonov.heroapp.data.Hero
 import com.artonov.heroapp.databinding.ItemRowHeroBinding
 
@@ -24,6 +26,12 @@ class ListHeroAdapter(
         holder.binding.tvItemName.text = name
         holder.binding.tvItemDescription.text = description
         holder.binding.imgItemPhoto.setImageResource(photo)
+
+        holder.binding.cardView.setOnClickListener() {
+            val intent = Intent(holder.itemView.context,DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_HERO, listHero[position])
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         languageRecyclerView = findViewById(R.id.rvLanguage)
-        languageRecyclerView.layoutManager = LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
+        languageRecyclerView.layoutManager = LinearLayoutManager(this)
         languageRecyclerView.setHasFixedSize(true)
 
         languageArrayList = arrayListOf()
